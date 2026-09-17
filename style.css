@@ -1,13 +1,13 @@
 :root {
-  --bg:#f3f0e9; --ink:#11110f; --muted:#74726c; --line:#cfcac0;
-  --dark:#11110f; --dark-2:#1a1916; --light:#f3f0e9; --accent:#d9ff4a;
+  --bg:#f5f4ef; --ink:#161714; --muted:#777871; --line:#d5d4cc;
+  --dark:#151614; --dark-2:#1d1e1b; --light:#f5f4ef; --accent:#c8d84a;
   --max:1280px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif;line-height:1.5}
 a{color:inherit;text-decoration:none}
-.nav{height:78px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(243,240,233,.92);backdrop-filter:blur(12px)}
+.nav{height:78px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(245,244,239,.94);backdrop-filter:blur(12px)}
 .brand{font-weight:800;font-size:24px;letter-spacing:-1px}.brand span{color:#777}
 .nav nav{display:flex;gap:28px;font:500 12px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em}
 .nav nav a{opacity:.72}.nav nav a:hover{opacity:1}
@@ -30,7 +30,7 @@ em{font-family:Georgia,serif;font-weight:400}
 .metrics article:nth-child(3n+2),.metrics article:nth-child(3n+3){padding-left:25px;border-left:1px solid #393832}
 .metrics span{font:11px "DM Mono",monospace;color:#999}.metrics strong{display:block;font-size:54px;letter-spacing:-.06em;margin:25px 0 5px}.metrics small{color:#aaa79e;font:12px "DM Mono",monospace;text-transform:uppercase}
 .timeline{border-top:1px solid var(--line)}.job{padding:32px 0;border-bottom:1px solid var(--line)}.job-meta{display:flex;justify-content:space-between;font:10px "DM Mono",monospace;color:var(--muted);text-transform:uppercase}.job h3{font-size:27px;margin:20px 0 8px;letter-spacing:-.03em}.job p{color:#595852;max-width:650px}.tags{display:flex;gap:8px;flex-wrap:wrap}.tags b{font:10px "DM Mono",monospace;border:1px solid var(--line);padding:6px 9px;font-weight:400}
-.capabilities{max-width:none;background:#e5e1d8}.capabilities>h2{margin:35px 0 75px}.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #bbb6ac}.cap-grid article{padding:32px 28px 30px 0;border-bottom:1px solid #bbb6ac}.cap-grid article+article{padding-left:28px;border-left:1px solid #bbb6ac}.cap-grid span{font:11px "DM Mono",monospace;color:var(--muted)}.cap-grid h3{font-size:26px;margin:28px 0}.cap-grid ul{padding:0;margin:0;list-style:none}.cap-grid li{padding:7px 0;color:#55534d;font-size:14px}
+.capabilities{max-width:none;background:#e8e7e1}.capabilities>h2{margin:35px 0 75px}.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #bbb6ac}.cap-grid article{padding:32px 28px 30px 0;border-bottom:1px solid #bbb6ac}.cap-grid article+article{padding-left:28px;border-left:1px solid #bbb6ac}.cap-grid span{font:11px "DM Mono",monospace;color:var(--muted)}.cap-grid h3{font-size:26px;margin:28px 0}.cap-grid ul{padding:0;margin:0;list-style:none}.cap-grid li{padding:7px 0;color:#55534d;font-size:14px}
 .projects{max-width:none}.project-list{margin-top:65px;border-top:1px solid var(--line)}.project{display:grid;grid-template-columns:70px 1fr 30px;gap:20px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line);transition:.25s}.project:hover{padding-left:15px;background:#e9e5dc}.project>span{font:11px "DM Mono",monospace;color:var(--muted)}.project h3{font-size:26px;margin:0 0 5px}.project p{margin:0;color:var(--muted);font-size:14px}.project>b{font-size:20px}
 .philosophy{background:var(--dark);color:var(--light);max-width:none}.philosophy .section-label{color:#aaa}.philosophy blockquote{font-size:clamp(38px,6vw,78px);line-height:1.02;letter-spacing:-.055em;margin:70px 0 10px;max-width:1100px}
 .connect{min-height:80vh}.connect>h2{margin:40px 0 30px}.connect>p{font-size:18px;color:var(--muted);max-width:580px}.links{display:flex;gap:12px;margin-top:55px;flex-wrap:wrap}.links a{border:1px solid var(--ink);padding:14px 22px;font:11px "DM Mono",monospace;text-transform:uppercase;transition:.2s}.links a:hover{background:var(--ink);color:var(--light)}
