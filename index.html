@@ -22,12 +22,11 @@
   --v: #3157d5;
   --r: #7a4fc5;
   --gradient-primary: linear-gradient(135deg, #3157d5 0%, #7a4fc5 50%, #00c6ff 100%);
-  --gradient-card: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   --radius: 14px;
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.01);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 20px 35px -10px rgba(49, 87, 213, 0.15);
 }
 
@@ -45,15 +44,9 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 
-/* Dynamic Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 15px rgba(49, 87, 213, 0.2); }
-  50% { box-shadow: 0 0 28px rgba(122, 79, 197, 0.4); }
 }
 
 @keyframes float {
@@ -82,7 +75,6 @@ a { color: inherit; text-decoration: none; }
   padding: 24px;
 }
 
-/* Sidebar Styling */
 .sidebar {
   position: sticky;
   top: 24px;
@@ -150,8 +142,6 @@ a { color: inherit; text-decoration: none; }
   border-radius: 10px;
   padding: 16px 12px;
   font-size: 11px;
-  position: relative;
-  overflow: hidden;
 }
 .status-badge {
   display: inline-flex;
@@ -230,11 +220,9 @@ a { color: inherit; text-decoration: none; }
 .social a { transition: var(--transition-fast); }
 .social a:hover { color: var(--accent); transform: translateY(-2px); }
 
-/* Main Content Layout */
 .main { min-width: 0; animation: fadeIn 0.6s ease-out; }
 .topbar { display: none; }
 
-/* Infographic Hero Section */
 .hero {
   min-height: 420px;
   position: relative;
@@ -258,17 +246,6 @@ a { color: inherit; text-decoration: none; }
   top: -60px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(49,87,213,0.12) 0%, rgba(255,255,255,0) 70%);
-  pointer-events: none;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  right: 180px;
-  bottom: -60px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(122,79,197,0.1) 0%, rgba(255,255,255,0) 70%);
   pointer-events: none;
 }
 .hero-content { position: relative; z-index: 2; }
@@ -303,34 +280,7 @@ a { color: inherit; text-decoration: none; }
   max-width: 520px;
 }
 .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.play {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #475467;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  transition: var(--transition-fast);
-}
-.play:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-.play i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-radius: 50%;
-  width: 26px;
-  height: 26px;
-  font-style: normal;
-  font-size: 10px;
-}
 
-/* Hero Widget Dynamic Graphic */
 .hero-graphic {
   position: relative;
   z-index: 2;
@@ -358,27 +308,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   text-transform: uppercase;
 }
-.widget-pill {
-  background: #def7ec;
-  color: #03543f;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 10px;
-}
+.widget-pill { background: #def7ec; color: #03543f; padding: 2px 8px; border-radius: 10px; font-size: 10px; }
 .widget-metrics { display: grid; gap: 10px; }
 .widget-row { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; }
-.widget-bar {
-  height: 6px;
-  background: #e2e8f0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.widget-bar-fill {
-  height: 100%;
-  background: var(--gradient-primary);
-  border-radius: 10px;
-  width: 88%;
-}
+.widget-bar { height: 6px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
+.widget-bar-fill { height: 100%; background: var(--gradient-primary); border-radius: 10px; }
 
 .clients {
   margin-top: 32px;
@@ -398,12 +332,8 @@ a { color: inherit; text-decoration: none; }
   padding: 4px 10px;
   border-radius: 6px;
   border: 1px solid var(--border);
-  font-weight: 600;
-  transition: var(--transition-fast);
 }
-.clients b:hover { border-color: var(--accent); color: var(--accent); }
 
-/* Infographic Stats Dashboard */
 .stats {
   margin: 24px 0;
   padding: 22px 28px;
@@ -439,7 +369,6 @@ a { color: inherit; text-decoration: none; }
 .stat .big { font: 700 26px/1.1 'Space Grotesk'; color: var(--text); }
 .stat small { font-size: 11px; color: var(--muted); font-weight: 500; display: block; margin-top: 2px; }
 
-/* Section & Headers */
 .section { padding: 36px 0; }
 .section-heading {
   display: flex;
@@ -447,34 +376,20 @@ a { color: inherit; text-decoration: none; }
   align-items: flex-end;
   margin-bottom: 24px;
 }
-.section h2 {
-  font: 700 24px 'Space Grotesk';
-  margin: 4px 0 0;
-  letter-spacing: -.02em;
-}
+.section h2 { font: 700 24px 'Space Grotesk'; margin: 4px 0 0; letter-spacing: -.02em; }
 .section-sub { color: var(--muted); font-size: 13px; }
 
-/* Services Visual Cards */
-.services {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
+.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px 18px;
   transition: var(--transition-smooth);
-  position: relative;
   display: flex;
   flex-direction: column;
 }
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(49, 87, 213, 0.4);
-  box-shadow: var(--shadow-lg);
-}
+.card:hover { transform: translateY(-6px); border-color: rgba(49, 87, 213, 0.4); box-shadow: var(--shadow-lg); }
 .icon {
   display: flex;
   align-items: center;
@@ -486,51 +401,25 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
   font-size: 18px;
   margin-bottom: 16px;
-  transition: var(--transition-fast);
 }
-.card:hover .icon { background: var(--accent); color: #fff; transform: scale(1.1); }
 .card h3 { font-size: 14px; font-weight: 700; margin: 0 0 8px; }
 .card p { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 0 0 16px; flex-grow: 1; }
 .more { font-size: 11px; font-weight: 700; color: var(--accent); display: inline-flex; align-items: center; gap: 4px; }
-.more:hover { gap: 8px; }
 
-/* Infographic AI Solution Process Pipeline (NEW) */
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  position: relative;
-  margin-top: 16px;
-}
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px; }
 .process-step {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
-  position: relative;
   transition: var(--transition-fast);
 }
-.process-step:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-.step-num {
-  font: 700 24px 'Space Grotesk';
-  color: var(--accent);
-  opacity: 0.3;
-  margin-bottom: 8px;
-}
-.process-step:hover .step-num { opacity: 1; }
+.process-step:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.step-num { font: 700 24px 'Space Grotesk'; color: var(--accent); opacity: 0.3; margin-bottom: 8px; }
 .process-step h4 { font-size: 13px; margin: 0 0 6px; font-weight: 700; }
 .process-step p { font-size: 11px; color: var(--muted); margin: 0; line-height: 1.5; }
 
-/* Portfolio / Projects Grid */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
+.projects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .project {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -539,35 +428,15 @@ a { color: inherit; text-decoration: none; }
   transition: var(--transition-smooth);
   display: block;
 }
-.project:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(49, 87, 213, 0.3);
-}
-.project-image {
-  height: 135px;
-  overflow: hidden;
-  position: relative;
-  background: #eef1f5;
-}
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
+.project:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(49, 87, 213, 0.3); }
+.project-image { height: 135px; overflow: hidden; position: relative; background: #eef1f5; }
+.project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .project:hover .project-image img { transform: scale(1.08); }
 .project-body { padding: 14px; }
 .project h3 { font-size: 13px; font-weight: 700; margin: 0 0 4px; color: var(--text); }
-.project small { font-size: 10px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.project small { font-size: 10px; color: var(--accent); font-weight: 600; text-transform: uppercase; }
 
-/* Infographic Skill Matrix Section */
-.skills-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 16px;
-}
+.skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
 .skill-box {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -575,23 +444,11 @@ a { color: inherit; text-decoration: none; }
   padding: 22px;
   box-shadow: var(--shadow-sm);
 }
-.skill-box h3 { font-size: 14px; margin: 0 0 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.skill-box h3 { font-size: 14px; margin: 0 0 16px; font-weight: 700; }
 .skill-item { margin-bottom: 14px; }
-.skill-item:last-child { margin-bottom: 0; }
 .skill-info { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 6px; }
-.skill-track {
-  height: 8px;
-  background: var(--surface-soft);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
-.skill-fill {
-  height: 100%;
-  background: var(--gradient-primary);
-  border-radius: 10px;
-  animation: fillProgress 1.5s ease-out forwards;
-}
+.skill-track { height: 8px; background: var(--surface-soft); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.skill-fill { height: 100%; background: var(--gradient-primary); border-radius: 10px; animation: fillProgress 1.5s ease-out forwards; }
 
 .tags-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 .tag-badge {
@@ -604,19 +461,9 @@ a { color: inherit; text-decoration: none; }
   border-radius: 20px;
   transition: var(--transition-fast);
 }
-.tag-badge:hover {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--accent);
-  transform: scale(1.05);
-}
+.tag-badge:hover { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); transform: scale(1.05); }
 
-/* Testimonials / Quotes */
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .quote {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -625,41 +472,12 @@ a { color: inherit; text-decoration: none; }
   color: #475467;
   font-size: 12px;
   line-height: 1.6;
-  position: relative;
-  transition: var(--transition-fast);
 }
-.quote:hover { border-color: var(--accent); transform: translateY(-3px); }
-.quote::before {
-  content: '“';
-  display: block;
-  color: var(--accent);
-  font: 700 32px/1 Georgia, serif;
-  height: 16px;
-}
-.person {
-  margin-top: 16px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: var(--text);
-  font-size: 11px;
-  font-weight: 700;
-}
-.avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-}
-.person small { display: block; color: var(--muted); font-weight: 500; font-size: 10px; }
+.quote::before { content: '“'; display: block; color: var(--accent); font: 700 32px/1 Georgia, serif; height: 16px; }
+.person { margin-top: 16px; display: flex; gap: 10px; align-items: center; color: var(--text); font-size: 11px; font-weight: 700; }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; }
 
-/* Contact Section */
+/* Enhanced Contact Form Styling */
 .contact {
   margin: 32px 0 0;
   display: grid;
@@ -701,6 +519,10 @@ a { color: inherit; text-decoration: none; }
   background: #fff;
   box-shadow: 0 0 0 3px var(--accent-glow);
 }
+.contact-form input.invalid-input {
+  border-color: #ef4444 !important;
+  background: #fef2f2 !important;
+}
 .contact-form textarea {
   grid-column: 1 / 3;
   height: 90px;
@@ -710,6 +532,27 @@ a { color: inherit; text-decoration: none; }
   grid-column: 1 / 3;
   padding: 12px;
 }
+.validation-message {
+  grid-column: 1 / 3;
+  font-size: 11px;
+  font-weight: 600;
+  display: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.validation-message.error {
+  display: block;
+  color: #991b1b;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+}
+.validation-message.success {
+  display: block;
+  color: #065f46;
+  background: #d1fae5;
+  border: 1px solid #6ee7b7;
+}
+
 .contact-info {
   grid-column: 1 / 3;
   font-size: 11px;
@@ -717,6 +560,8 @@ a { color: inherit; text-decoration: none; }
   padding-top: 10px;
   line-height: 1.8;
 }
+.contact-info a { color: var(--accent); font-weight: 600; }
+.contact-info a:hover { text-decoration: underline; }
 
 .footer {
   padding: 24px 0;
@@ -727,7 +572,6 @@ a { color: inherit; text-decoration: none; }
   margin-top: 40px;
 }
 
-/* Responsive Media Queries */
 @media (max-width: 960px) {
   .shell { display: block; padding: 16px; }
   .sidebar { display: none; }
@@ -748,19 +592,15 @@ a { color: inherit; text-decoration: none; }
   .hero { grid-template-columns: 1fr; padding: 40px 24px; text-align: center; }
   .hero-content { margin: 0 auto; }
   .hero-graphic { display: none; }
-  .hero-actions { justify-content: center; }
   .services, .projects, .process-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .skills-container { grid-template-columns: 1fr; }
-  .testimonials { grid-template-columns: 1fr; }
-  .contact { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .skills-container, .testimonials, .contact { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 540px) {
-  .services, .projects, .process-grid { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: 1fr; }
+  .services, .projects, .process-grid, .stats { grid-template-columns: 1fr; }
   .contact-form { grid-template-columns: 1fr; }
-  .contact-form textarea, .contact-form button, .contact-info { grid-column: 1; }
+  .contact-form textarea, .contact-form button, .contact-info, .validation-message { grid-column: 1; }
 }
 </style>
 </head>
@@ -802,8 +642,8 @@ a { color: inherit; text-decoration: none; }
     <div class="follow">
       CONNECT
       <div class="social">
-        <a href="https://github.com/Vivekananth519" target="_blank" title="GitHub">GitHub</a> · 
-        <a href="#contact" title="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/Vivekananth519" target="_blank" rel="noopener" title="GitHub">GitHub</a> · 
+        <a href="https://www.linkedin.com/in/vivekananth-rajaganesan-89477a70" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
       </div>
     </div>
   </aside>
@@ -811,7 +651,7 @@ a { color: inherit; text-decoration: none; }
   <!-- Main Content -->
   <main class="main">
     
-    <!-- Mobile Top Navigation Bar -->
+    <!-- Top Navigation Bar for Mobile -->
     <header class="topbar">
       <a class="brand" href="#home">
         <span class="logo"><span class="v">V</span><span class="r">R</span></span>
@@ -834,7 +674,7 @@ a { color: inherit; text-decoration: none; }
         
         <div class="hero-actions">
           <a class="button" href="#projects">Explore Work →</a>
-          <a class="play" href="#contact"><i>▶</i> Let's Talk</a>
+          <a class="button button-sm" style="background: transparent; color: var(--text); border: 1px solid var(--border);" href="https://www.linkedin.com/in/vivekananth-rajaganesan-89477a70" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
         </div>
 
         <div class="clients">
@@ -847,7 +687,6 @@ a { color: inherit; text-decoration: none; }
         </div>
       </div>
 
-      <!-- Infographic Hero Graphic Widget -->
       <div class="hero-graphic">
         <div class="hero-card-widget">
           <div class="widget-header">
@@ -872,7 +711,7 @@ a { color: inherit; text-decoration: none; }
       </div>
     </section>
 
-    <!-- Key Stats Section (Infographic Metric Dashboard) -->
+    <!-- Dashboard Stats -->
     <div class="stats">
       <div class="stat">
         <div class="stat-icon">⏱</div>
@@ -945,7 +784,7 @@ a { color: inherit; text-decoration: none; }
       </div>
     </section>
 
-    <!-- Infographic Process Flow Section (NEW) -->
+    <!-- Process Workflow Section -->
     <section class="section" id="process">
       <div class="section-heading">
         <div>
@@ -986,11 +825,11 @@ a { color: inherit; text-decoration: none; }
           <div class="eyebrow">PORTFOLIO</div>
           <h2>Featured AI Projects</h2>
         </div>
-        <a class="more" href="https://github.com/Vivekananth519" target="_blank">View GitHub Repository →</a>
+        <a class="more" href="https://github.com/Vivekananth519" target="_blank" rel="noopener">View GitHub Repository →</a>
       </div>
 
       <div class="projects">
-        <a class="project" href="https://github.com/Vivekananth519/ocr" target="_blank">
+        <a class="project" href="https://github.com/Vivekananth519/ocr" target="_blank" rel="noopener">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Intelligent OCR">
           </div>
@@ -1000,7 +839,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </a>
 
-        <a class="project" href="https://github.com/Vivekananth519/llms_ocr" target="_blank">
+        <a class="project" href="https://github.com/Vivekananth519/llms_ocr" target="_blank" rel="noopener">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=80" alt="LLM OCR">
           </div>
@@ -1010,7 +849,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </a>
 
-        <a class="project" href="https://github.com/Vivekananth519/Text2SQL-Chinook" target="_blank">
+        <a class="project" href="https://github.com/Vivekananth519/Text2SQL-Chinook" target="_blank" rel="noopener">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Text2SQL">
           </div>
@@ -1020,7 +859,7 @@ a { color: inherit; text-decoration: none; }
           </div>
         </a>
 
-        <a class="project" href="https://github.com/Vivekananth519/codes2" target="_blank">
+        <a class="project" href="https://github.com/Vivekananth519/codes2" target="_blank" rel="noopener">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Production ML">
           </div>
@@ -1032,7 +871,7 @@ a { color: inherit; text-decoration: none; }
       </div>
     </section>
 
-    <!-- Infographic Skill Matrix Section -->
+    <!-- Skill Matrix Section -->
     <section class="section" id="skills">
       <div class="section-heading">
         <div>
@@ -1043,7 +882,6 @@ a { color: inherit; text-decoration: none; }
       </div>
 
       <div class="skills-container">
-        <!-- Visual Progress Bar Column -->
         <div class="skill-box">
           <h3>⚡ Core Competencies</h3>
           
@@ -1068,7 +906,6 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
 
-        <!-- Tech Stack Pill Cloud Column -->
         <div class="skill-box">
           <h3>🛠 Ecosystem & Badges</h3>
           <div class="tags-cloud">
@@ -1125,26 +962,31 @@ a { color: inherit; text-decoration: none; }
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section with Dynamic Form & Email Validation -->
     <section class="contact" id="contact">
       <div class="contact-intro">
         <div class="eyebrow">CONTACT</div>
         <h2>Let's build intelligent products together</h2>
-        <p>Have an AI challenge or contract project? Send a message and let's discuss solutions.</p>
+        <p>Have an AI challenge or contract project? Send a message directly to my inbox.</p>
         <div>
-          <a class="button" href="mailto:ananthnadar1993@gmail.com">Send Email Directly →</a>
+          <a class="button" href="mailto:ananthnadar1993@gmail.com">Send Direct Email →</a>
         </div>
       </div>
 
-      <form class="contact-form" action="mailto:ananthnadar1993@gmail.com" method="post" enctype="text/plain">
-        <input aria-label="Your Name" placeholder="Your Name" required>
-        <input aria-label="Your Email" type="email" placeholder="Your Email" required>
-        <textarea aria-label="Your Message" placeholder="Describe your project or query..." required></textarea>
-        <button class="button" type="submit">Send Message ✈</button>
+      <form class="contact-form" id="portfolioContactForm" novalidate>
+        <input id="senderName" name="name" aria-label="Your Name" placeholder="Your Name *" required>
+        <input id="senderEmail" name="email" type="email" aria-label="Your Email" placeholder="Your Email Address *" required>
+        <textarea id="senderMessage" name="message" aria-label="Your Message" placeholder="Describe your project, inquiry, or message... *" required></textarea>
+        
+        <!-- Interactive Validation Status Box -->
+        <div class="validation-message" id="validationFeedback"></div>
+
+        <button class="button" type="submit" id="submitBtn">Send Message ✈</button>
         
         <div class="contact-info">
-          ✉ ananthnadar1993@gmail.com<br>
-          🔗 github.com/Vivekananth519<br>
+          ✉ <a href="mailto:ananthnadar1993@gmail.com">ananthnadar1993@gmail.com</a><br>
+          💼 <a href="https://www.linkedin.com/in/vivekananth-rajaganesan-89477a70" target="_blank" rel="noopener">linkedin.com/in/vivekananth-rajaganesan</a><br>
+          🔗 <a href="https://github.com/Vivekananth519" target="_blank" rel="noopener">github.com/Vivekananth519</a><br>
           📍 India · Available Worldwide
         </div>
       </form>
@@ -1157,6 +999,95 @@ a { color: inherit; text-decoration: none; }
 
   </main>
 </div>
+
+<!-- JavaScript for Client-Side Email Validation & Direct Async Form Submission -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('portfolioContactForm');
+  const nameInput = document.getElementById('senderName');
+  const emailInput = document.getElementById('senderEmail');
+  const messageInput = document.getElementById('senderMessage');
+  const feedback = document.getElementById('validationFeedback');
+  const submitBtn = document.getElementById('submitBtn');
+
+  // RFC 5322 Standard Strict Email Validation Regex Pattern
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  function showFeedback(text, isError) {
+    feedback.textContent = text;
+    feedback.className = `validation-message ${isError ? 'error' : 'success'}`;
+  }
+
+  function clearFeedback() {
+    feedback.textContent = '';
+    feedback.className = 'validation-message';
+    emailInput.classList.remove('invalid-input');
+  }
+
+  // Real-time validation clear on typing
+  emailInput.addEventListener('input', () => {
+    if (emailRegex.test(emailInput.value.trim())) {
+      emailInput.classList.remove('invalid-input');
+      clearFeedback();
+    }
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    clearFeedback();
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    // Check empty fields
+    if (!name || !email || !message) {
+      showFeedback('⚠️ Please fill out all required fields.', true);
+      return;
+    }
+
+    // Strict Email Address Validation
+    if (!emailRegex.test(email)) {
+      emailInput.classList.add('invalid-input');
+      showFeedback('❌ Please enter a valid email address (e.g., name@domain.com).', true);
+      emailInput.focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending Message... ⏳';
+
+    try {
+      // Direct AJAX Submission to target email endpoint
+      const response = await fetch('https://formsubmit.co/ajax/ananthnadar1993@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Name: name,
+          Sender_Email: email,
+          Message: message,
+          _subject: `New Portfolio Message from ${name}`
+        })
+      });
+
+      if (response.ok) {
+        showFeedback('✅ Thank you! Your message has been sent to ananthnadar1993@gmail.com.', false);
+        form.reset();
+      } else {
+        throw new Error('Failed to deliver message via contact gateway.');
+      }
+    } catch (err) {
+      showFeedback('❌ Sending failed. Please email directly to ananthnadar1993@gmail.com.', true);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message ✈';
+    }
+  });
+});
+</script>
 
 </body>
 </html>
