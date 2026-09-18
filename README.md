@@ -2,18 +2,19 @@
 
 Personal portfolio website for GitHub Pages.
 
-## Deploy
+## Overview
 
-1. Create a repository named `Vivekananth519.github.io`.
-2. Copy `index.html`, `style.css`, and `script.js` into the repository root.
-3. Commit and push.
-4. In GitHub: Settings → Pages → Deploy from branch → `main` → `/root`.
-5. Your site will be available at `https://vivekananth519.github.io/`.
+This repository contains the source for my portfolio website hosted on GitHub Pages.
 
-## Customize
+## Files
 
-- Replace the LinkedIn URL in `index.html`.
-- Replace the email address if needed.
-- Update experience entries with exact company names/dates.
-- Add more projects under `#projects`.
-- Add a profile image later if desired.
+- `index.html` — main portfolio page and embedded styling
+- `README.md` — project information
+
+## Deployment
+
+1. Push this repository to GitHub.
+2. Go to Settings → Pages.
+3. Set the source to the default branch.
+4. Your site will be published at:
+   `https://vivekananth519.github.io/`
